@@ -1,0 +1,216 @@
+﻿<link href="../wwwroot/css/Teacher/studentinfo.css" rel="stylesheet" />
+
+
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">@ViewData["Header"]</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">@ViewData["MainHeader"]</a></li>
+                    <li class="breadcrumb-item active">@ViewData["Header"]</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+    <div class="container-fluid">
+              
+        <div class="card card-success card-outline">
+            <div class="card-body card-main">
+
+                <!--View student profile-->
+                <div class="card card-success card-student-profile">                   
+                    <div class="card-header align-items-center justify-content-center h-100">
+                        <div class="row">
+                            <div class="col-2">
+                                <a href="@Url.Action("CourseStudentList", "Teacher")"><i class="fa fa-arrow-left"></i></a>
+                            </div>
+                         
+                            <div class="col-sm-10 col-md-10 text-center"><i class="fa fa-users"></i>Student Information</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div id="loadHeading">
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 overflow-hidden">
+                                        <div class="card">
+                                            <img class="card-img-top" src="~/img/avatar5.png" alt="Student Image">                                
+                                        </div>                                      
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 ">
+                                        <ul class="nav nav-tabs">
+                                            <li class="nav-item "><a data-toggle="tab" href="#Summary" class="text-success nav-link active"><i class="fa fa-indent"></i> Summery</a></li>
+                                            <li class="nav-item"><a data-toggle="tab" href="#Contact" class="text-success nav-link"><i class="fa fa-bookmark-o"></i> Contact Info</a></li>
+                                            <li class="nav-item"><a data-toggle="tab" href="#Address" class="text-success nav-link"><i class="fa fa-home"></i> Address</a></li>
+                                            <li class="nav-item"><a data-toggle="tab" href="#General" class="text-success nav-link"><i class="fa fa-info"></i> General Info</a></li>
+                                        </ul>
+
+                                        <div class="tab-content">
+                                            <div id="Summary" class="tab-pane fade active">
+
+                                                <div class="table-responsive">
+                                                    <table class="table d-flex justify-content-between flex-nowrap">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-info"><i class="fa fa-user"></i> Full Name:<span class="tdvalue" id="fullName">Riche Arda</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-dark"><i class="fa fa-list-ol"></i> Student Number:<span class="tdvalue" id="studentNumber">217-03803</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-book"></i> Program:<span class="tdvalue" id="program">BS Information Technology</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-group"></i>  Major:<span class="tdvalue" id="major">Information Technology</span></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-group"></i> Year Level:<span class="tdvalue" id="yearLevel">Fourth Year</span></td>
+
+                                                            </tr>
+                                                            
+                                                        </tbody>
+
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa-venus-mars"></i> Gender:<span class="tdvalue" id="gender">Male</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-group"></i> Civil Status:<span class="tdvalue" id="civilStatus">Single</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-group"></i> Nationality:<span class="tdvalue" id="nationality">Filipino</span></td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-group"></i> Birthdate:<span class="tdvalue" id="birthdate">October 30, 1996</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-group"></i> Age:<span class="tdvalue" id="age">25</span></td>
+
+                                                            </tr>
+                                                          
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div id="Contact" class="tab-pane fade">
+                                                <div class="table-responsive panel">
+                                                    <table class="table">
+                                                        <tbody>
+
+                                                            <tr>
+                                                                <td class="text-success"><i class="glyphicon glyphicon-phone"></i> Telephone No.:</td>
+                                                                <td>032-20302</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="glyphicon glyphicon-phone"></i> Mobile Number:</td>
+                                                                <td>09165618593</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-envelope-o"></i> Email Address:</td>
+                                                                <td><a href="#">rarda_m@gmail.com</a></td>
+                                                            </tr>
+                                                            
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div id="Address" class="tab-pane fade">
+                                                <div class="table-responsive panel">
+                                                    <table class="table">
+                                                        <tbody>
+
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-home"></i> Address</td>
+                                                                <td>
+                                                                    <address>
+                                                                        <strong>
+                                                                            C-***, Amahiya
+                                                                        </strong><br>
+                                                                        Kharobar, ****** <br>
+                                                                        Gorakhpur, Utter Pradesh, India<br>
+                                                                    </address>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div id="General" class="tab-pane fade">
+                                                <div class="table-responsive panel">
+                                                    <table class="table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-university"></i> Last School</td>
+                                                                <td>Pawan Mall's School</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-calendar"></i> Date of Admission</td>
+                                                                <td>March 4, 2009</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-home"></i> Birth Place</td>
+                                                                <td>Delhi</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-calendar"></i> Academic Year</td>
+                                                                <td>2015-2016</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-medkit"></i> Medical Condition</td>
+                                                                <td>Normal</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-thumbs-up"></i> Active/Inactive</td>
+                                                                <td>Student is Active</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="glyphicon glyphicon-time"></i> Last Editing</td>
+                                                                <td>2015-08-20 09:41:56</td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.table-responsive -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>     
+    </div> <!-- /.container-fluid -->
+</div> <!-- /.content -->
+
+

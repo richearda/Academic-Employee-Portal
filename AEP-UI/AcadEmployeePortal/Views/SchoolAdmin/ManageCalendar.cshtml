@@ -1,0 +1,98 @@
+﻿
+<script src="~/js/academichead/managecalendar.js"></script>
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">@ViewData["Header"]</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">@ViewData["MainHeader"]</a></li>
+                    <li class="breadcrumb-item active">@ViewData["Header"]</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="card card-success card-outline">
+            <div class="card-body">
+                <button class="btn btn-success data-table-button mb-2 pb-2" type="button" data-toggle="tooltip" data-placement="top" title="Add Event" id="openAddForm"><i class="fa fa-plus pl-3"></i>Add Event</button>
+                <div id="calendarAdmin"></div>              
+            </div>
+            
+        </div>
+    </div><!-- /.container-fluid -->
+
+    <!--Add modal-->
+    <div id="eventModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Event</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <div class="modal-body">
+                    <form class="col-md-12 form-horizontal" id="eventForm">
+                        <input type="hidden" id="hdEventID" value="0" />
+                        <div class="form-group">
+                            <label>Title</label>
+                            <div class="input-group">
+                                <input type="text" id="txtTitle" name="eventTitle" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <div class="input-group">
+                                <textarea id="txtDescription" name="eventDescription" rows="3" class="form-control"></textarea>
+                            </div>
+                        </div>
+
+                            <div class="form-group">
+                                <label>Start</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="Select Start Date" name="eventStart" class="form-control" id="datetimepickerstart" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>End</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="Select End Date" name="eventEnd" class="form-control" id="datetimepickerend" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="chkIsHoliday" checked="checked" />Is Holiday</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Theme Color</label>
+                                <select id="ddThemeColor" name="themeColor" class="form-control">
+                                    <option value="">Default</option>
+                                    <option value="red">Red</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="black">Black</option>
+                                    <option value="green">Green</option>
+                                </select>
+                            </div>
+                            <button type="button" id="btnOperation" onclick="addEvent()" class="btn btn-success">Add</button>
+                            <button type="button" id="btnDeleteClear" onclick="clearForm()" class="btn btn-secondary">Clear</button>
+</form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+<!-- /.content -->
+

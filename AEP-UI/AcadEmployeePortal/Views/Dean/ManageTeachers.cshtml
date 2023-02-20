@@ -1,0 +1,227 @@
+﻿<script src="~/js/dean/manageteacher.js"></script>
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">@ViewData["Header"]</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">@ViewData["MainHeader"]</a></li>
+                    <li class="breadcrumb-item active">@ViewData["Header"]</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+    <div class="container-fluid">    
+        <div class="row mb-2">          
+            <div class="col float-right buttons-location">
+            </div>
+        </div>
+        <div class="card card-success card-outline">
+            <div class="card-body">
+                <table id="tblTeachers" class="table table-bordered table-striped table-hover data-table-width">
+                </table>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+    <!--Modal Teacher Info-->
+    <div class="modal fade" id="teacherDetails" role="dialog">
+        <div class="modal-dialog" style="max-width: 100%">
+            <div class="modal-content">
+                <!--View student profile-->
+                <div class="card card-success card-student-profile">
+                    <div class="card-header align-items-center justify-content-between h-100">
+                        <div class="row">
+                         
+                            <div class="col-sm-10 col-md-10 text-center">Teacher Information</div>
+                            <div class="col-sm-2 col-md-2 text-center"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button></div>
+                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div id="loadHeading">
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 overflow-hidden">
+                                        <div class="card">
+                                            <img class="card-img-top" id="teacher-image" src="~/img/avatar5.png" alt="Teacher Image">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 ">
+                                        <ul class="nav nav-tabs">
+                                            <li class="nav-item"><a data-toggle="tab" href="#General" class="text-success nav-link active"><i class="fa fa-info"></i> General Info</a></li>
+                                            <li class="nav-item"><a data-toggle="tab" href="#Contact" class="text-success nav-link"><i class="fa-solid fa-square-phone mr-1"></i>Contact Info</a></li>
+                                            <li class="nav-item"><a data-toggle="tab" href="#Address" class="text-success nav-link"><i class="fa fa-home"></i> Address</a></li>
+
+                                        </ul>
+
+                                        <div class="tab-content">
+                                            <div id="General" class="tab-pane fade show active">
+
+                                                <div class="table-responsive card">
+                                                    <table class="table d-flex justify-content-between flex-nowrap" id="table-teacher-details">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-success">Full Name:<span class="tdvalue ml-1" id="fullName">Riche Arda</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success">Employee No.:<span class="tdvalue ml-1" id="employeeNumber">217-03803</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success">Classification:<span class="tdvalue ml-1" id="classification">Classification</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success">Designation:<span class="tdvalue ml-1" id="designation">Designation</span></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td class="text-success">Designation Status:<span class="tdvalue ml-1" id="designationStatus">Designation Status</span></td>
+
+                                                            </tr>
+
+                                                        </tbody>
+
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-success">Gender:<span class="tdvalue ml-1" id="gender">Male</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success">Civil Status:<span class="tdvalue ml-1" id="civilStatus">Single</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success">Nationality:<span class="tdvalue ml-1" id="nationality">Filipino</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success">Birthdate:<span class="tdvalue ml-1" id="birthdate">October 30, 1996</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success">Age:<span class="tdvalue ml-1" id="age">25</span></td>
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div id="Contact" class="tab-pane fade">
+                                                <div class="table-responsive card">
+                                                    <table class="table">
+                                                        <tbody>
+
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa-solid fa-square-phone"></i>Telephone No.:<span class="tdvalue ml-1" id="telephoneNumber">032-20302</span></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa-solid fa-mobile"></i>Mobile No.:<span class="tdvalue ml-1" id="mobileNumber">09090909</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa-solid fa-at"></i>Email:<span class="tdvalue ml-1" id="email">email@gmail.com</span></td>
+                                                            </tr>
+
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div id="Address" class="tab-pane fade">
+                                                <div class="table-responsive card">
+                                                    <table class="table">
+                                                        <tbody>
+
+                                                            <tr>
+                                                                <td class="text-success"><i class="fa fa-home"></i> Address</td>
+                                                                <td>
+                                                                    <address class="text-success">
+
+                                                                        <strong>
+                                                                            House No.
+                                                                        </strong><br />
+                                                                        <span id="houseno" class="ml-1"></span><br />
+                                                                        <strong>
+                                                                            Street Name
+                                                                        </strong><br />
+                                                                        <span id="streetname" class="ml-1"></span><br />
+                                                                        <strong>
+                                                                            Barangay
+                                                                        </strong><br />
+                                                                        <span id="barangay" class="ml-1"></span><br />
+                                                                        <strong>
+                                                                            Municipality
+                                                                        </strong><br />
+                                                                        <span id="municipality" class="ml-1"></span><br />
+                                                                        <strong>
+                                                                            Province
+                                                                        </strong><br />
+                                                                        <span id="province" class="ml-1"></span>
+                                                                    </address>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.table-responsive -->
+                        <div class="row mb-2">
+                            <div class="col">
+                                <button type="button" class="btn btn-success" id="openUnassignedSubjectModal">Assign Subject</button>
+                            </div>
+                            <div class="col float-right buttons-location-2">
+                            </div>
+                        </div>
+                        <h3>List of assigned courses</h3>
+                        <table id="tblTeacherCourses" class="table table-bordered table-striped table-hover data-table-width">
+                            <tr>
+                                <td id="courseList">This teacher does not have a course.</td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /.container-fluid -->
+    <div class="modal fade" id="modalCourseNotInList" role="dialog">
+        <div class="modal-dialog" style="max-width: 100%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h4 id="modalTitle" class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <!--Table for unenrolled students-->
+                    <table id="tblCourseNotInList" class="table table-bordered table-striped table-hover data-table-width" style="width: 100%">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div><!-- /.content -->

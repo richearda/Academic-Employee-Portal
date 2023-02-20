@@ -1,0 +1,62 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/* custom styles */
+.data-table-width {
+    width: 100%;
+}
+
+#printheading {
+    display:none;
+}
+
+
+
+/*Styles for printing*/
+@media print {
+    body {
+        font-family:Impact, Arial, serif;
+        font-size:12pt;
+        line-height: 22px;
+        background: none;
+        color:#000;
+    }
+    /*Exclude Search label and button*/
+    #tblCourseStudentList_filter {
+        display:none;
+    }
+    /*header*/
+    #tblCourseStudentList > thead > tr > th {
+         text-align:center;
+         justify-content:center;
+    }
+    #tblCourseStudentList > thead > tr > th::after {
+        display:none;
+    }
+    /*Hide the last column that contains buttons*/
+    #tblCourseStudentList > thead > tr:nth-last-child() {
+        
+        border-color:forestgreen;
+    }
+
+    /*Table row data*/
+    #tblCourseStudentList > tbody > tr > td {
+        text-align:left;
+    }
+    #mclogo[src*="~/img/avatar2.png"] {
+        /*content: url("~/img/avatar2.png");*/
+    }
+    #mcclogo[src*="~/img/avatar3.png"] {
+        /*content: url("~/img/avatar3.png");*/
+    }
+    #printheading {
+        display: block;
+    }
+    #text-header > h5, h6 {
+        line-height:0.8rem;
+    }
+    /*.buttons-location, .course-select, #openUnenrolledStudentModal, footer, .print-record {
+        display: none;
+    }*/
+
+}

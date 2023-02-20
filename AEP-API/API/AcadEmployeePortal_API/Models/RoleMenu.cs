@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ISMS_API.Models
+{
+    public class RoleMenu
+    {
+        public int RoleMenuId { get; set; }
+        public int? RoleId { get; set; }
+        public int? MenuId { get; set; }
+
+        public virtual Menu Menu { get; set; }
+        public virtual Role Role { get; set; }
+    }
+}

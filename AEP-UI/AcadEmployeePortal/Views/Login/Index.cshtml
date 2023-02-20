@@ -1,0 +1,45 @@
+﻿<script src="~/js/login/login.js"></script>
+
+@{ 
+    ViewData["Title"] = "Login";    
+}
+
+<div class="login-box">
+    <!-- /.login-logo -->
+    <div class="card card-outline card-success">
+        <div class="card-header text-center">
+            <p class="h2"><b>Employee</b>&nbsp;Login</p>
+        </div>
+        <div class="card-body">
+            <!-- <p class="login-box-title">Sign in to start your session</p> -->
+            <form id="loginForm">
+                <div class="input-group mb-3">
+                    <input type="text" id="loginUsername" name="username" class="form-control" placeholder="Username">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" id="loginPassword" name="password" class="form-control" placeholder="Password">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- /.col -->
+                    <div class="col-4" style="margin: auto;">
+                        <button type="submit" class="btn btn-success btn-block" onclick="AuthenticateUser(document.getElementById('loginUsername').value, document.getElementById('loginPassword').value);" id="signin">Sign In</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form>
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+</div>
+<!-- /.login-box -->

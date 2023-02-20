@@ -1,0 +1,58 @@
+﻿
+@switch (ViewData["Role"])
+{
+    case "Dean":
+<div class="container">
+    <div class="row">
+        <div class="col-2">         
+            <img src="~/img/avatar2.png" class="rounded float-end" alt="MC logo" />
+        </div>
+        <div class="col-10 align-items-center">
+            <h2>Republic of the Philippines</h2>
+            <h3>City of Mandaue</h3>
+            <h3>Mandaue City College</h3>
+            <h3>Don Andres Soriano Ave., Centro Mandaue City</h3>
+        </div>
+        <div class="col-2">           
+            <img src="~/img/avatar3.png" class="rounded float-start" alt="MCC logo"/>
+        </div>
+    </div>
+</div>
+        break;
+    case "Teacher":
+        <li class="nav-item">
+            <a href="@Url.Action("TeacherCourseList", "Teacher")" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>My Courses</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="@Url.Action("CourseStudentList", "Teacher")" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>My Students</p>
+            </a>
+        </li>
+        break;
+    case "AcademicHead":
+        <li class="nav-item">
+            <a href="@Url.Action("ManageCalendar", "AcademicHead")" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Manage Calendar</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="@Url.Action("CourseStudentList", "Teacher")" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>My Students</p>
+            </a>
+        </li>
+        break;
+    default:
+        <li class="nav-item">
+            <a href="@Url.Action("Index", "Login")" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Courses</p>
+            </a>
+        </li>
+        break;
+}

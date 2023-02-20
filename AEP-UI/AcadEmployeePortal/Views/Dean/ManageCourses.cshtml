@@ -1,0 +1,35 @@
+﻿<link href="~/css/animatemodal.css" rel="stylesheet" />
+<script src="~/js/dean/managecourses.js"></script>
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">@ViewData["Header"]</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">@ViewData["MainHeader"]</a></li>
+                    <li class="breadcrumb-item active">@ViewData["Header"]</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="card card-success card-outline">
+            <div class="card-body">
+               @* <button class="btn btn-success data-table-button mb-2 pb-2" type="button" data-toggle="tooltip" data-placement="top" title="Add Record" onclick="openCourseModal()"><i class="fa fa-plus pl-3"></i>Add Course</button>*@
+                <table id="tblCourseList" class="table table-bordered table-striped table-hover data-table-width">
+                </table>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+    <!-- College Modal -->
+   
+</div>
+                    <!-- /.content -->

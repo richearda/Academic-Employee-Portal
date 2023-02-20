@@ -1,0 +1,16 @@
+﻿@{
+    string initPath = Convert.ToString(ViewData["InitPath"]);
+    if (initPath == "Login")
+    {
+        Layout = "_Login_Layout";
+    }
+    else if (initPath == "Unauthorized")
+    {
+        Layout = "_Error_Layout";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
+
+}
