@@ -1,6 +1,7 @@
 # Academic Employee Portal
 A web base application for Academic Employees.
 
+
 # Technologies Used
 Frontend
 - HTML
@@ -13,7 +14,10 @@ Backend
 - Entity Framework (EF) Core 
 - jQuery Ajax
 
-
+## User Types
+- Teacher
+- Dean
+- School Admin
 
 # Screenshots
  ## Teacher
@@ -26,7 +30,7 @@ Backend
 |:-:|:-:|:-:|
 |![Dean Main](https://i.imgur.com/Ny8EDz4.png "Dean Main")|![View Teacher Info](https://i.imgur.com/yc02MG4.png "Teacher's Information")| ![Assign Subject](https://i.imgur.com/eBSCFjs.png "Assign Teacher Subject")|
 
-## Acad Admin
+## School Admin
  ||||
 |:-:|:-:|:-:|
 |![Acad Main](https://i.imgur.com/lwWsg9F.png "Acad Main")|![Add Event](https://i.imgur.com/hlCn8CZ.png "Add Event")| ![Update Event](https://i.imgur.com/rtQPRio.png "Update Event")|
@@ -51,7 +55,7 @@ Backend
 **Username:** userasteacher | **Password:** password
 ### For Dean ###
 **Username:** userasdean | **Password:** password
-### For Acad Admin ###
+### For School Admin ###
 **Username:** userasschooladmin | **Password:** password
 
 ## Note ##
